@@ -21,10 +21,10 @@ void frequencia(char *linha, int *freq) {
     for (int i = 0; i < tamanho_string; i++) {   // uma tarefa pra cada caractere
         if (linha[i] >= 32 && linha[i] < 127) {  // Somente caracteres ASCII imprimíveis
             #pragma omp atomic
-            freq[linha[i] - 32]++;  
+            freq[linha[i] - 32]++;
 
             // Depuração: Mostra o caractere, seu código ASCII e a frequência atual
-            printf("letra: '%c', ASCII: %d, index: %d, freq: %d\n", linha[i], linha[i], linha[i] - 32, freq[linha[i] - 32]);
+            // printf("letra: '%c', ASCII: %d, index: %d, freq: %d\n", linha[i], linha[i], linha[i] - 32, freq[linha[i] - 32]);
         }
     }
 }
